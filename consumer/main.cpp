@@ -1,7 +1,12 @@
 import asio;
 import std;
+import mylib;
+
 
 int main()
 {
-    static_assert(std::is_same_v<asio::any_io_executor, asio::executor>);
+    asio::io_context ctx;
+    ctx.run();
+    mylib::f();
+    mylib::g();
 }

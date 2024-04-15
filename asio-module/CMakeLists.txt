@@ -25,7 +25,7 @@ target_link_libraries(asio PUBLIC OpenSSL::SSL OpenSSL::Crypto stdlib)
 install(TARGETS asio
     EXPORT asio-targets
     FILE_SET CXX_MODULES
-        DESTINATION lib/cmake/asio/module
+        DESTINATION lib/cmake/asio
     FILE_SET HEADERS DESTINATION .
 )
 install(EXPORT asio-targets
