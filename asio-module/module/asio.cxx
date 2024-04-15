@@ -9,10 +9,6 @@ import std;
 #include <asio.hpp>
 #include <asio/ssl.hpp>
 
-#ifndef ASIO_USE_TS_EXECUTOR_AS_DEFAULT
-#warning "Im building without the macro"
-#endif
-
 export module asio;
 
 namespace asio {
