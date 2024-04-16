@@ -6,5 +6,8 @@ find_package(mylib REQUIRED)
 
 add_executable(main main.cpp)
 target_link_libraries(main PRIVATE asio mylib)
-target_compile_options(main PRIVATE -stdlib=libc++)
-target_link_options(main PRIVATE -stdlib=libc++)
+
+if(NOT CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    add_compile_options(-stdlib=libc++)
+    add_link_options(-stdlib=libc++)
+endif()
