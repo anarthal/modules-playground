@@ -6,6 +6,8 @@ import std;
 #include <errno.h>
 #include <limits.h>
 #include <stddef.h>
+#include <malloc.h>
+#include <stdio.h>
 #include <asio.hpp>
 #include <asio/ssl.hpp>
 
@@ -42,6 +44,7 @@ export using asio::async_connect;
 export using asio::buffer;
 export using asio::socket_base;
 export using asio::co_spawn;
+export using asio::signal_set;
 
 namespace error {
 export using asio::error::make_error_code;
